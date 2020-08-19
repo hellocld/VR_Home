@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+
+[sub_resource type="NoiseTexture" id=2]
+seamless = true
+noise = SubResource( 1 )
+
+[sub_resource type="SpatialMaterial" id=3]
+albedo_color = Color( 0.937255, 0.92549, 0.878431, 1 )
+albedo_texture = SubResource( 2 )
+uv1_scale = Vector3( 4, 4, 4 )
+
+[node name="Home" type="Spatial"]
+
+[node name="CSGTorus" type="CSGTorus" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.466101, 0 )
+inner_radius = 0.937956
+outer_radius = 1.25951
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.881105, 0.433267, 0.18956, 0, -0.400829, 0.916153, 0.47292, -0.807227, -0.353172, 0, 0, 0 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -7, 0 )
+width = 22.0
+depth = 24.0
+material = SubResource( 3 )
