@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Home_env.tres" type="Environment" id=1]
 [ext_resource path="res://Stuff/Instruments/Drum.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/Samples/BassDrum2.wav" type="AudioStream" id=3]
 [ext_resource path="res://Audio/Samples/BassDrum1.wav" type="AudioStream" id=4]
+[ext_resource path="res://Stuff/Tools/Sequencer.tscn" type="PackedScene" id=5]
 
 [sub_resource type="QuadMesh" id=1]
 size = Vector2( 500, 500 )
@@ -47,3 +48,22 @@ audio_sample = ExtResource( 3 )
 [node name="Drum2" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.453025, -0.360494, -0.81536, 0.622665, 0.782489, 0, 0.63801, -0.507696, 0.578954, 0.337151, 0.566784, 0.782291 )
 audio_sample = ExtResource( 4 )
+
+[node name="Drum3" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, -0.324255, 0.957148, -1.12115 )
+audio_sample = ExtResource( 3 )
+
+[node name="Drum4" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.275745, 0.957148, -1.12115 )
+audio_sample = ExtResource( 3 )
+
+[node name="Drum5" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.475745, 0.957148, -1.12115 )
+audio_sample = ExtResource( 4 )
+
+[node name="Drum6" parent="." instance=ExtResource( 2 )]
+transform = Transform( -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 0.875745, 0.957148, -1.12115 )
+audio_sample = ExtResource( 3 )
+
+[node name="Sequencer" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.37172, -1.12527 )

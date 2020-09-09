@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Stuff/Automatons/Vehicle.gd" type="Script" id=1]
+[ext_resource path="res://Materials/Glow_Purp.tres" type="Material" id=2]
+
+
+[sub_resource type="CapsuleShape" id=4]
+radius = 0.186803
+height = 0.288282
+
+[node name="Vehicle" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705969, 0 )
+script = ExtResource( 1 )
+target = NodePath("../Path/PathFollowTarget")
+mass = 20.0
+max_velocity = 3.0
+max_force = 0.5
+
+[node name="CSGCylinder" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0025298, 0.154344 )
+radius = 0.165911
+height = 0.398883
+cone = true
+material = ExtResource( 2 )
+
+[node name="CSGCylinder2" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.0025298, -0.154344 )
+radius = 0.0691654
+height = 0.338717
+material = ExtResource( 2 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0721685, -0.286231 )
+width = 0.0317169
+height = 0.123401
+depth = 0.0722647
+material = ExtResource( 2 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 4 )
