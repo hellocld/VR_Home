@@ -3,12 +3,13 @@
 [ext_resource path="res://Stuff/Automatons/Vehicle.gd" type="Script" id=1]
 [ext_resource path="res://Materials/Glow_Purp.tres" type="Material" id=2]
 
-
-[sub_resource type="CapsuleShape" id=4]
+[sub_resource type="CapsuleShape" id=1]
 radius = 0.186803
 height = 0.288282
 
-[node name="Vehicle" type="Spatial"]
+[node name="Vehicle" type="Spatial" groups=[
+"Boid",
+]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.705969, 0 )
 script = ExtResource( 1 )
 target = NodePath("../Path/PathFollowTarget")
@@ -36,7 +37,8 @@ height = 0.123401
 depth = 0.0722647
 material = ExtResource( 2 )
 
-[node name="Area" type="Area" parent="."]
+[node name="AreaCollision" type="Area" parent="."]
+collision_layer = 32
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
-shape = SubResource( 4 )
+[node name="CollisionShape" type="CollisionShape" parent="AreaCollision"]
+shape = SubResource( 1 )
