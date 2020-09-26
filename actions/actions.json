@@ -1,0 +1,35 @@
+{
+	"default_bindings": [
+		{
+			"controller_type": "knuckles",
+			"binding_url": "bindings_index_controller.json"
+		}
+	],
+	"actions": [
+		{
+			"name": "/actions/godot/in/left_hand",
+			"type": "skeleton",
+			"skeleton": "/skeleton/hand/left"
+		},
+		{
+			"name": "/actions/godot/in/right_hand",
+			"type": "skeleton",
+			"skeleton": "/skeleton/hand/right"
+		}
+	],
+	"action_set": [
+		{
+			"name": "/actions/default",
+			"name": "leftright"
+		}
+	],
+	"localization": [
+		{
+			"language_tag": "en_US",
+			"/actions/default": "Default actions",
+			"/actions/godot/in/left_hand": "Left hand",
+			"/actions/godot/in/right_hand": "Right hand"
+		}
+	]
+}
+	

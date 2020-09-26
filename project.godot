@@ -15,7 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="home"
+config/name="Home"
+run/main_scene="res://Places/Home/Home.tscn"
 config/icon="res://icon.png"
 
 [autoload]

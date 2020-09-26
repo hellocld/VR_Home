@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/godot-openvr/OpenVRSkeleton.gdns" type="Script" id=1]
+[ext_resource path="res://Stuff/Hands/vr_glove_right_model_slim.glb" type="PackedScene" id=2]
+[ext_resource path="res://addons/godot-openvr/OpenVRPose.gdns" type="Script" id=3]
+
+[node name="vr_glove_right_model_slim" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+action = "/actions/godot/in/right_hand"
+
+[node name="Skeleton" parent="RootNode" index="0"]
+script = ExtResource( 1 )
+action = "/actions/godot/in/right_hand"
+motion_range = 1
