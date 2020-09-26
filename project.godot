@@ -28,6 +28,10 @@ Me="*res://Me.tscn"
 
 singletons=[ "res://addons/godot-openvr/godot_openvr.gdnlib" ]
 
+[layer_names]
+
+3d_physics/layer_6="Fingertips"
+
 [rendering]
 
 environment/default_clear_color=Color( 0, 0, 0, 1 )
