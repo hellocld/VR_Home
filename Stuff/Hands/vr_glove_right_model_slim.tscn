@@ -23,7 +23,9 @@ motion_range = 1
 transform = Transform( -0.347509, 0.0284256, 0.937246, 0.130949, 0.991217, 0.0184906, -0.928488, 0.129158, -0.348179, 0.0498674, 0.0560921, 0.112777 )
 bone_name = "finger_thumb_r_end"
 
-[node name="Area" type="Area" parent="RootNode/Skeleton/TipThumb" index="0"]
+[node name="Area" type="Area" parent="RootNode/Skeleton/TipThumb" index="0" groups=[
+"Right Hand",
+]]
 collision_layer = 32
 collision_mask = 0
 
@@ -34,10 +36,10 @@ shape = SubResource( 1 )
 transform = Transform( -0.717079, -0.669965, 0.19221, 0.0761528, 0.19881, 0.977075, -0.69282, 0.715277, -0.0915429, 0.0345977, 0.0355405, 0.164767 )
 bone_name = "finger_index_r_end"
 
-[node name="Area" type="Area" parent="RootNode/Skeleton/TipIndex" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+[node name="Area" type="Area" parent="RootNode/Skeleton/TipIndex" index="0" groups=[
+"Right Hand",
+]]
 collision_layer = 32
-collision_mask = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Skeleton/TipIndex/Area" index="0"]
 shape = SubResource( 1 )
@@ -46,8 +48,9 @@ shape = SubResource( 1 )
 transform = Transform( -0.755126, -0.650532, 0.0812013, 0.0513261, 0.064817, 0.996577, -0.653568, 0.756708, -0.0155557, 0.0321126, 0.00654219, 0.171613 )
 bone_name = "finger_middle_r_end"
 
-[node name="Area" type="Area" parent="RootNode/Skeleton/TimMiddle" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+[node name="Area" type="Area" parent="RootNode/Skeleton/TimMiddle" index="0" groups=[
+"Right Hand",
+]]
 collision_layer = 32
 collision_mask = 0
 
@@ -58,7 +61,9 @@ shape = SubResource( 1 )
 transform = Transform( -0.749612, -0.661178, -0.0304372, 0.0961052, -0.154228, 0.98335, -0.654864, 0.734206, 0.179154, 0.0346831, -0.0253934, 0.156924 )
 bone_name = "finger_ring_r_end"
 
-[node name="Area" type="Area" parent="RootNode/Skeleton/TipRing" index="0"]
+[node name="Area" type="Area" parent="RootNode/Skeleton/TipRing" index="0" groups=[
+"Right Hand",
+]]
 collision_layer = 32
 collision_mask = 0
 
@@ -69,14 +74,18 @@ shape = SubResource( 1 )
 transform = Transform( -0.615435, -0.749373, -0.244295, 0.0354297, -0.335934, 0.941219, -0.787391, 0.570604, 0.233296, 0.0270969, -0.0462902, 0.133467 )
 bone_name = "finger_pinky_r_end"
 
-[node name="Area" type="Area" parent="RootNode/Skeleton/TipPinky" index="0"]
+[node name="Area" type="Area" parent="RootNode/Skeleton/TipPinky" index="0" groups=[
+"Right Hand",
+]]
 collision_layer = 32
 collision_mask = 0
 
 [node name="CollisionShape" type="CollisionShape" parent="RootNode/Skeleton/TipPinky/Area" index="0"]
 shape = SubResource( 1 )
 
-[node name="AreaPalm" type="Area" parent="." index="1"]
+[node name="AreaPalm" type="Area" parent="." index="1" groups=[
+"Right Hand",
+]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.011067, 0.00622515, 0.0484179 )
 collision_layer = 64
 collision_mask = 0

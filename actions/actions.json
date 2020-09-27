@@ -7,6 +7,16 @@
 	],
 	"actions": [
 		{
+			"name": "/actions/godot/in/right_touch_haptics",
+			"type": "vibration",
+			"requirement": "suggested"
+		},
+		{
+			"name": "/actions/godot/in/left_touch_haptics",
+			"type": "vibration",
+			"requirement": "suggested"
+		},
+		{
 			"name": "/actions/godot/in/left_hand",
 			"type": "skeleton",
 			"skeleton": "/skeleton/hand/left"
